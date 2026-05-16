@@ -10,8 +10,9 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "electron:dev": "vite build && electron .",
-    "electron:build": "vite build && electron-builder --win portable",
+    "electron:dev": "vite build --base ./ && electron .",
+    "electron:build": "vite build --base ./ && electron-builder --win portable",
+    "pages:build": "vite build --base /structdiff/ && rm -rf docs && cp -r dist docs",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -34,6 +35,7 @@
     }
   },
   "dependencies": {
+    "exceljs": "^4.4.0",
     "js-yaml": "^4.1.1",
     "react": "^19.2.6",
     "react-dom": "^19.2.6"
