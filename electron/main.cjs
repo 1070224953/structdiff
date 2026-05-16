@@ -10,11 +10,15 @@ function createWindow() {
     minWidth: 800,
     minHeight: 500,
     title: 'StructDiff',
+    show: false,
     webPreferences: {
       nodeIntegration: false,
       contextIsolation: true,
     },
   });
+
+  mainWindow.maximize();
+  mainWindow.show();
 
   const loadPath = path.join(__dirname, '..', 'dist', 'index.html');
   console.log('Loading:', loadPath);
