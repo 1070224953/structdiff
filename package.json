@@ -6,7 +6,7 @@
   "description": "Semantic diff for structured data — understand what actually changed in JSON and YAML",
   "repository": "https://github.com/1070224953/structdiff",
   "type": "module",
-  "main": "electron/main.js",
+  "main": "electron/main.cjs",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
