@@ -10,8 +10,8 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
-    "electron:dev": "vite build --base ./ && electron .",
-    "electron:build": "vite build --base ./ && electron-builder --win portable",
+    "electron:dev": "vite build --base ./ && node fix-html.cjs && electron .",
+    "electron:build": "vite build --base ./ && node fix-html.cjs && electron-builder --win portable",
     "pages:build": "vite build --base /structdiff/ && rm -rf docs && cp -r dist docs",
     "lint": "eslint .",
     "preview": "vite preview"
