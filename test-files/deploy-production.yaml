@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-service
+  labels:
+    app: user-service
+    env: production
+    team: backend
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      app: user-service
+  template:
+    metadata:
+      labels:
+        app: user-service
+    spec:
+      containers:
+        - name: api
+          image: registry.example.com/user-service:2.0.0
+          ports:
+            - containerPort: 8080
+            - containerPort: 9090
+          env:
+            - name: DATABASE_URL
+              value: "postgres://db.production:5432/users"
+            - name: LOG_LEVEL
+              value: "warn"
+            - name: API_KEY
+              value: "sk-prod-xxxxxxxx"
+          resources:
+            limits:
+              cpu: "2000m"
+              memory: "1Gi"
+            requests:
+              cpu: "500m"
+              memory: "512Mi"
