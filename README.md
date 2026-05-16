@@ -48,13 +48,13 @@ replicas: 3            # changed + moved
 ## Quick Start
 
 ```bash
-git clone https://github.com/your-username/structdiff.git
+git clone https://github.com/1070224953/structdiff.git
 cd structdiff
 npm install
 npm run dev
 ```
 
-Or try it instantly online: **[Live Demo](https://your-username.github.io/structdiff)**
+Or try it instantly online: **[Live Demo](https://1070224953.github.io/structdiff)**
 
 ## Usage
 
@@ -88,7 +88,7 @@ npm install
 npm run dev
 ```
 
-Issues and PRs welcome. Check the [issues](https://github.com/your-username/structdiff/issues) for `good first issue` tags.
+Issues and PRs welcome. Check the [issues](https://github.com/1070224953/structdiff/issues) for `good first issue` tags.
 
 ## License
 
